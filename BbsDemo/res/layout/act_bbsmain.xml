@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activitycolor" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/red" >
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我的帖子"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:id="@+id/img_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:src="@drawable/search" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rag_title"
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rab_all"
+            style="@style/radio_bbs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="全部" />
+
+        <RadioButton
+            android:id="@+id/rab_essence"
+            style="@style/radio_bbs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="精华帖" />
+
+        <RadioButton
+            android:id="@+id/rab_mybbs"
+            style="@style/radio_bbs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="我的帖子" />
+
+        <RadioButton
+            android:id="@+id/rab_collect"
+            style="@style/radio_bbs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="我的收藏" />
+
+        <RadioButton
+            android:id="@+id/rab_join"
+            style="@style/radio_bbs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="我的参与" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/cursor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85dp"
+        android:scaleType="matrix"
+        android:src="@drawable/bottomicon" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="87dp"
+        android:background="@color/grey" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lin_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <EditText
+                android:id="@+id/edt_content"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/shape_searcheditbg"
+                android:gravity="center_vertical"
+                android:hint="请点击选择地区进行搜索"
+                android:paddingLeft="15dp"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="50dp"
+                android:layout_height="32dp"
+                android:background="@drawable/shape_solidsearch"
+                android:text="搜索"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vbbsPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/activitycolor"
+            android:flipInterval="30"
+            android:persistentDrawingCache="animation" />
+    </LinearLayout>
+
+    <!-- <ListView -->
+    <!-- android:id="@+id/lvbbscontent" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginLeft="@dimen/dp5" -->
+    <!-- android:layout_marginRight="@dimen/dp5" -->
+    <!-- android:layout_marginTop="@dimen/dp87" -->
+    <!-- android:scrollbars="none" > -->
+    <!-- </ListView> -->
+
+
+    <!-- android:flipInterval="30" 翻页延迟效果 -->
+
+    <ImageView
+        android:id="@+id/img_writebbs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="28dp"
+        android:src="@drawable/writebbs" />
+
+</FrameLayout>

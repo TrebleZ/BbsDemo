@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="activitycolor">#eeeeee</color>
+    <color name="red">#dc2f33</color>
+    <color name="white">#ffffff</color>
+    <color name="orange">#ff5c29</color>
+    <color name="gray">#707070</color>
+     <color name="grey">#d8d8d8</color>
+        <color name="black">#323232</color>
+       <!-- 60%的透明度 -->
+    <color name="whitebg">#b2ffffff</color>
+    <color name="blackbg">#33323232</color>
+
+</resources>
